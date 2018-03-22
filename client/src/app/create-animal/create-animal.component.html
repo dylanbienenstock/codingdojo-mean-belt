@@ -1,0 +1,9 @@
+<h1>Pet Shelter</h1>
+<h4>Know of a pet needing a home?</h4>
+
+<div *ngIf="errors">
+    <p *ngFor="let error of errors"> {{ error }} </p>
+</div>
+
+<app-animal-form [buttonText]="buttonText" (formSubmitted)="createAnimal($event)">
+</app-animal-form>

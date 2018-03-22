@@ -1,0 +1,37 @@
+<a class="home-link" [routerLink]="['']">Home</a>
+
+<h1>Pet Shelter</h1>
+<h4 *ngIf="!data">Loading...</h4>
+
+<div class="details-container" *ngIf="data">
+    <h4>Details about {{data.name}}</h4>
+
+    <table cellpadding="8">
+        <tr>
+            <td>Pet Type:</td>
+            <td>{{data.type}}</td>
+        </tr>
+
+        <tr>
+            <td>Description:</td>
+            <td>{{data.description}}</td>
+        </tr>
+
+        <tr>
+            <td>Pet Skills:</td>
+            <td>
+                <p *ngFor="let skill of data.skills">{{skill}}</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Likes:</td>
+            <td>{{data.likes}}</td>
+        </tr>
+    </table>
+
+    <div class="details-buttons">
+        <button (click)="likePet()" [ngStyle]="likeButtonStyle">Like this pet</button>
+        <button (click)="adoptPet()">Adopt this pet!</button>
+    </div>
+</div>

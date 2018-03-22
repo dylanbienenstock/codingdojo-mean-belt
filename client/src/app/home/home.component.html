@@ -1,0 +1,23 @@
+<h1>Pet Shelter</h1>
+
+<h4 *ngIf="animals">These pets are looking for a home!</h4>
+<h4 *ngIf="!animals">There aren't any pets yet!</h4>
+
+<a [routerLink]="['new']">Add a pet to the shelter</a>
+
+<table *ngIf="animals">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Actions</th>
+    </tr>
+
+    <tr *ngFor="let animal of animals">
+        <td>{{ animal.name }}</td>
+        <td>{{ animal.type }}</td>
+        <td>
+            <button (click)="goToDetails(animal._id)">Details</button>
+            <button (click)="goToEdit(animal._id)">Edit</button>
+        </td>
+    </tr>
+</table>

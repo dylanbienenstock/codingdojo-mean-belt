@@ -1,0 +1,59 @@
+$input-width: 275px;
+$indentation: 16px;
+
+:host {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 16px;
+
+    form {
+        label {
+            display: block;
+            color: gray;
+            font-weight: bold;
+        }
+
+        input[type=text] {
+            width: $input-width;
+            padding: 4px 2px;
+            margin-bottom: 8px;
+
+            outline: none;            
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+
+        .animal-form-skills {
+            margin-top: 8px;
+            margin-left: $indentation;
+
+            input[type=text] {
+                width: $input-width - $indentation !important;
+            }
+        }
+
+        .animal-form-buttons {
+            margin-left: $indentation * 2;
+
+            input[type=submit], 
+            input[type=button] {
+                text-decoration: none;
+                cursor: pointer;
+                padding: 16px;
+                
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                background-color: #66bbff;
+                border-radius: 12px;                
+
+                outline: none;
+                border: none;
+
+                &:first-child {
+                    margin-right: 32px;
+                }
+            }
+        }
+    }
+}

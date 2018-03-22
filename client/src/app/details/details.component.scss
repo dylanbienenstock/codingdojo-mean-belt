@@ -1,0 +1,42 @@
+.home-link {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+}
+
+.details-container {
+    margin-left: 12px;
+}
+
+td {
+    &:first-child {
+        font-weight: bold;
+        vertical-align: top;
+    }
+
+    &:last-child {
+        p:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.details-buttons {
+    margin-top: 16px;
+
+    button {
+        cursor: pointer;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        background-color: #7c9293;
+        border-radius: 6px;        
+
+        outline: none;
+        border: none;
+
+        &:first-child {
+            margin-right: 20px;            
+        }
+    }
+}

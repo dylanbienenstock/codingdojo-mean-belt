@@ -1,0 +1,36 @@
+<form (submit)="onSubmit()">
+    <label for="name">Pet name:</label>
+    <input name="name" type="text" [(ngModel)]="data.name">
+
+    <label for="type">Pet type:</label>
+    <input name="type" type="text" [(ngModel)]="data.type">
+
+    <label for="description">Description:</label>
+    <input name="description" type="text" [(ngModel)]="data.description">
+
+    <label for="">Skills (optional):</label>
+
+    <div class="animal-form-skills">
+        <span>
+            <label for="skill1">Skill 1:</label>
+            <input name="skill1" type="text" [(ngModel)]="data.skills[0]">
+        </span>
+
+        <span>
+            <label for="skill2">Skill 2:</label>
+            <input name="skill2" type="text" [(ngModel)]="data.skills[1]">
+        </span>
+
+        <span>
+            <label for="skill3">Skill 3:</label>
+            <input name="skill3" type="text" [(ngModel)]="data.skills[2]">
+        </span>
+    </div>
+
+    <div class="animal-form-buttons">
+        <span>
+            <input type="submit" value="Add pet">
+            <input type="button" [routerLink]="['']" value="Cancel">
+        </span>
+    </div>
+</form>
